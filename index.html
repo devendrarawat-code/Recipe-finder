@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RecipeHub - Find Your Perfect Meal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <i class="fas fa-utensils"></i>
+                <span>RecipeHub</span>
+            </div>
+            <div class="nav-links">
+                <a href="#" class="nav-link active">
+                    <i class="fas fa-search"></i>
+                    <span>Search</span>
+                </a>
+                <a href="#" class="nav-link">
+                    <i class="fas fa-heart"></i>
+                    <span>Favorites</span>
+                </a>
+                <a href="#" class="nav-link">
+                    <i class="fas fa-user"></i>
+                    <span>Profile</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="gradient-text">Discover Amazing Recipes</span>
+                    <br>From Your Ingredients
+                </h1>
+                <p class="hero-subtitle">
+                    Transform your available ingredients into delicious meals with our smart recipe finder
+                </p>
+                
+                <!-- Search Box -->
+                <div class="search-container">
+                    <div class="search-wrapper">
+                        <div class="search-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <input 
+                            type="text" 
+                            class="search-control" 
+                            placeholder="Enter ingredients (e.g., chicken, tomato, onion)" 
+                            id="search-input"
+                        >
+                        <button type="button" class="search-btn" id="search-btn">
+                            <span>Find Recipes</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                    <div class="search-suggestions">
+                        <span class="suggestion-label">Popular:</span>
+                        <button class="suggestion-tag">Chicken</button>
+                        <button class="suggestion-tag">Pasta</button>
+                        <button class="suggestion-tag">Rice</button>
+                        <button class="suggestion-tag">Beef</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Floating Recipe Cards -->
+            <div class="floating-cards">
+                <div class="floating-card card-1">
+                    <img src="pasta.png?height=60&width=60" alt="Recipe">
+                    <span>Italian Pasta</span>
+                </div>
+                <div class="floating-card card-2">
+                    <img src="image.png?height=60&width=60" alt="Recipe">
+                    <span>Asian Stir Fry</span>
+                </div>
+                <div class="floating-card card-3">
+                    <img src="tacos.png?height=60&width=60" alt="Recipe">
+                    <span>Mexican Tacos</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Results Section -->
+        <section class="results-section">
+            <div class="section-header">
+                <h2 class="title">
+                    <i class="fas fa-utensils"></i>
+                    Recipe Results
+                </h2>
+                <div class="results-filter">
+                    <button class="filter-btn active">All</button>
+                    <button class="filter-btn">Quick</button>
+                    <button class="filter-btn">Healthy</button>
+                    <button class="filter-btn">Popular</button>
+                </div>
+            </div>
+
+            <!-- Loading State -->
+            <div class="loading" id="loading" style="display: none;">
+                <div class="loading-animation">
+                    <div class="cooking-pot">
+                        <i class="fas fa-fire"></i>
+                    </div>
+                    <div class="loading-dots">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <p class="loading-text">Cooking up some amazing recipes...</p>
+            </div>
+
+            <!-- Recipe Grid -->
+            <div class="recipe-grid" id="meal">
+                <!-- Recipe cards will be populated here -->
+            </div>
+        </section>
+    </div>
+
+    <!-- Recipe Modal -->
+    <div class="recipe-modal" id="recipe-modal">
+        <div class="modal-overlay"></div>
+        <div class="meal-details">
+            <button type="button" class="recipe-close-btn" id="recipe-close-btn">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="meal-details-content">
+                <!-- Recipe details will be populated here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Background Elements -->
+    <div class="bg-elements">
+        <div class="bg-circle circle-1"></div>
+        <div class="bg-circle circle-2"></div>
+        <div class="bg-circle circle-3"></div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
