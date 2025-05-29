@@ -29,3 +29,19 @@
 1. Clone the repository:
    ```bash
    git clone https://github.com/devendrarawat-code/recipe-finder.git
+
+## 📸 Screenshot
+
+Here is a preview of the Recipe Finder app interface:
+
+### 🏠 Homepage
+![Homepage](./screeenshots/homepage.png)
+![Homepage](./screeenshots/h2.jpeg)
+
+### 🔍 Search Result
+![Search Result](./screeenshots/search.jpeg)
+![Search Result](./screeenshots/s3.jpeg)
+
+### 📋 Recipe Details
+![Recipe Details](./screeenshots/recipe.png)
+![Recipe Details](./screeenshots/r3.jpeg)
